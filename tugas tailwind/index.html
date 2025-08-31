@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Acme Rockets</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+  </head>
+  <body class="bg-white text-gray-900 dark:bg-black dark:text-white">
+    <!-- Navbar -->
+    <nav class="bg-teal-700 dark:bg-gray-800 text-white shadow-md">
+      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
+        <a href="#" class="flex items-center space-x-2 font-bold text-xl">
+          🚀 <span>Acme Rockets</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#rockets" class="hover:text-gray-300">Our Rockets</a>
+          <a href="#testimonials" class="hover:text-gray-300">Testimonials</a>
+          <a href="#contact" class="hover:text-gray-300">Contact Us</a>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button
+          id="darkToggle"
+          class="ml-4 px-2 py-1 rounded bg-gray-200 dark:bg-gray-600 text-black dark:text-white transition"
+        >
+          🌙
+        </button>
+
+        <!-- Mobile Button -->
+        <button id="menuBtn" class="md:hidden ml-2 text-2xl">☰</button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="mobileMenu"
+        class="max-h-0 overflow-hidden transition-all duration-500 md:hidden bg-teal-600 dark:bg-gray-900"
+      >
+        <a href="#rockets" class="block px-4 py-2">Our Rockets</a>
+        <a href="#testimonials" class="block px-4 py-2">Testimonials</a>
+        <a href="#contact" class="block px-4 py-2">Contact Us</a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="max-w-6xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center">
+      <div class="flex-1 space-y-4">
+        <h1 id="typingText" class="text-4xl font-extrabold">We Boldly Go Where No Rocket Has Gone Before...</h1>
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          We're building rockets for the next century today. From the moon to
+          Mars, Jupiter and beyond... <br />
+          Think Acme Rockets.
+        </p>
+      </div>
+      <div class="flex-1 mt-10 md:mt-0 flex justify-center">
+        <img
+          src="https://acme-rockets.netlify.app/img/rocketdab.png"
+          alt="Astronaut riding a rocket"
+          class="w-72 md:w-96"
+        />
+      </div>
+    </section>
+
+    <!-- Rockets -->
+    <section id="rockets" class="bg-gray-100 dark:bg-gray-900 py-20">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 id="bla" class="text-3xl font-bold text-center mb-12">Our Rocket</h1>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:scale-105 hover:shadow-lg transition transform duration-300 cursor-pointer">
+            <img src="https://acme-rockets.netlify.app/img/rocketman.png" alt="Explorer Rocket" class="w-32 mx-auto" />
+            <h3 class="text-xl font-bold mt-4 text-center">Explorer</h3>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:scale-105 hover:shadow-lg transition transform duration-300 cursor-pointer">
+            <img src="https://acme-rockets.netlify.app/img/rocketride.png" alt="Adventurer Rocket" class="w-32 mx-auto" />
+            <h3 class="text-xl font-bold mt-4 text-center">Adventurer</h3>
+          </div>
+          <div class="p-6 bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden hover:scale-105 hover:shadow-lg transition transform duration-300 cursor-pointer">
+            <img src="https://acme-rockets.netlify.app/img/rocketlaunch.png" alt="Infinity Rocket" class="w-32 mx-auto" />
+            <h3 class="text-xl font-bold mt-4 text-center">Infinity</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+  <!-- Testimonials Slider -->
+<section id="testimonials" class="py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Testimonials</h2>
+
+    <div class="relative overflow-hidden">
+      <!-- Slider Wrapper -->
+      <div id="testimonialSlider" class="flex transition-transform duration-700 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="flex flex-col md:flex-row w-full gap-6 opacity-100 scale-100 transition-all duration-700">
+          <blockquote class="flex-1 p-6 bg-white dark:bg-gray-800 rounded-lg shadow transform transition duration-500 hover:scale-105 flex flex-col items-center text-center">
+            <img src="https://i.pravatar.cc/100?img=1" alt="Elon" class="w-16 h-16 rounded-full mb-4" />
+            <p>"Acme has the best rockets in the world. Totally worth it!"</p>
+            <span class="font-bold mt-2">- Elon (not Musk)</span>
+          </blockquote>
+          <blockquote class="flex-1 p-6 bg-white dark:bg-gray-800 rounded-lg shadow transform transition duration-500 hover:scale-105 flex flex-col items-center text-center">
+            <img src="https://i.pravatar.cc/100?img=2" alt="NASA Guy" class="w-16 h-16 rounded-full mb-4" />
+            <p>"Our mission to Mars was a success thanks to Acme Rockets."</p>
+            <span class="font-bold mt-2">- NASA Guy</span>
+          </blockquote>
+        </div>
+        <!-- Slide 2 -->
+        <div class="flex flex-col md:flex-row w-full gap-6 opacity-0 scale-95 transition-all duration-700">
+          <blockquote class="flex-1 p-6 bg-white dark:bg-gray-800 rounded-lg shadow transform transition duration-500 hover:scale-105 flex flex-col items-center text-center">
+            <img src="https://i.pravatar.cc/100?img=3" alt="Galactic Traveler" class="w-16 h-16 rounded-full mb-4" />
+            <p>"Reliable rockets, excellent support, highly recommended!"</p>
+            <span class="font-bold mt-2">- Galactic Traveler</span>
+          </blockquote>
+          <blockquote class="flex-1 p-6 bg-white dark:bg-gray-800 rounded-lg shadow transform transition duration-500 hover:scale-105 flex flex-col items-center text-center">
+            <img src="https://i.pravatar.cc/100?img=4" alt="Astro" class="w-16 h-16 rounded-full mb-4" />
+            <p>"Flying with Acme Rockets was an unforgettable experience!"</p>
+            <span class="font-bold mt-2">- Astro</span>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button id="prevTestimonial" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-8 h-8 flex items-center justify-center">◀</button>
+      <button id="nextTestimonial" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-300 dark:bg-gray-700 text-black dark:text-white rounded-full w-8 h-8 flex items-center justify-center">▶</button>
+    </div>
+  </div>
+</section>
+
+<!-- Script Slider dengan Fade + Scale -->
+<script>
+  const slider = document.getElementById("testimonialSlider");
+  const slides = Array.from(slider.children);
+  let index = 0;
+
+  const showSlide = (i) => {
+    slides.forEach((slide, idx) => {
+      if(idx === i){
+        slide.classList.remove("opacity-0","scale-95");
+        slide.classList.add("opacity-100","scale-100");
+      } else {
+        slide.classList.remove("opacity-100","scale-100");
+        slide.classList.add("opacity-0","scale-95");
+      }
+    });
+  };
+
+  document.getElementById("nextTestimonial").addEventListener("click", () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  document.getElementById("prevTestimonial").addEventListener("click", () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  // Auto slide every 5 seconds
+  setInterval(() => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  }, 5000);
+
+  // Inisialisasi slide pertama
+  showSlide(index);
+</script>
+
+
+    <!-- Contact -->
+<!-- Contact Us Section -->
+<section id="contact" class="py-20 bg-teal-700 dark:bg-gray-800">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-4xl font-bold text-white text-center mb-4">Contact Us</h2>
+    <p class="text-lg text-teal-100 text-center mb-8">
+      Need a custom rocket? Want to collaborate? Reach out today and let’s make history together.
+    </p>
+
+    <form class="bg-white dark:bg-gray-900 rounded-lg shadow-lg p-8 space-y-6">
+      <div>
+        <label class="block text-gray-700 dark:text-gray-200 font-semibold mb-2" for="name">Name</label>
+        <input
+          type="text"
+          id="name"
+          placeholder="Your Name"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
+        />
+      </div>
+      <div>
+        <label class="block text-gray-700 dark:text-gray-200 font-semibold mb-2" for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="you@example.com"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
+        />
+      </div>
+      <div>
+        <label class="block text-gray-700 dark:text-gray-200 font-semibold mb-2" for="message">Message</label>
+        <textarea
+          id="message"
+          placeholder="Your Message"
+          rows="4"
+          class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500 dark:bg-gray-800 dark:text-white"
+        ></textarea>
+      </div>
+      <div class="text-center">
+        <button
+          type="submit"
+          class="px-8 py-3 bg-teal-700 text-white font-semibold rounded-lg shadow-lg hover:bg-teal-800 transition"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer class="bg-teal-700 dark:bg-gray-800 text-white py-6">
+      <div class="max-w-6xl mx-auto px-4 text-center">
+        &copy; <span id="year"></span> Acme Rockets. All rights reserved.
+      </div>
+    </footer>
+
+    <!-- Script -->
+    <script>
+      const darkToggle = document.getElementById("darkToggle");
+      const html = document.documentElement;
+
+      // Load saved theme
+      if (localStorage.getItem("theme") === "dark") {
+        html.classList.add("dark");
+        darkToggle.textContent = "☀";
+      } else {
+        html.classList.remove("dark");
+        darkToggle.textContent = "🌙";
+      }
+
+      // Toggle
+      darkToggle.addEventListener("click", () => {
+        html.classList.toggle("dark");
+        if (html.classList.contains("dark")) {
+          localStorage.setItem("theme", "dark");
+          darkToggle.textContent = "☀";
+        } else {
+          localStorage.setItem("theme", "light");
+          darkToggle.textContent = "🌙";
+        }
+      });
+
+      // Mobile Menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("max-h-0");
+        mobileMenu.classList.toggle("max-h-screen");
+      });
+
+      // Year update
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script src="style.js"></script>
+  </body>
+</html>
